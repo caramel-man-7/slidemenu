@@ -1,0 +1,151 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+#wrapper {
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* --- humbergermenu --- */
+.humbergermenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background: #000;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.humbergermenu:hover {
+    background: #666;
+}
+
+.humbergermenu .humberger_line {
+    display: block;
+    height: 2px;
+    background: #fff;
+    margin-top: 5px;
+    transition: all 0.3s linear;
+}
+
+.humbergermenu .humberger_line:nth-child(1) {
+    margin-top: 6px;
+}
+
+/* --- navigation --- */
+#nav {
+    position: fixed;
+    top: 0;
+    left: -400px;
+    width: 400px;
+    height: 50px;
+    background: #eee;
+    transition: all 0.3s linear;
+}
+
+/* --- menu --- */
+ul.menu {
+    padding-right: 20px;
+    position: relative;
+    height: 50px;
+}
+
+ul.menu li {
+    width: 20%;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+}
+
+ul.menu li a {
+    display: block;
+    background: #eee;
+    transition: all 0.3s linear;
+}
+
+ul.menu li a:hover {
+    background: #ccc;
+}
+
+ul.menu_sub {
+    display: none;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 0;
+    padding: 0;
+    background: #000;
+    transition: all 2s linear;
+}
+
+ul.menu_sub li {
+    width: 20%;
+    float: left;
+    color: #fff;
+}
+
+/* -------------------------
+menu-open付与時
+------------------------- */
+#wrapper.menu-open #nav {
+    left: 50px;
+}
+
+/* --- menu-open humbergermenu --- */
+#wrapper.menu-open .humbergermenu .humberger_line:nth-child(1) {
+    transform: translateY(7px) rotate(315deg);
+}
+#wrapper.menu-open .humbergermenu .humberger_line:nth-child(2) {
+    left: 200%;
+    transform: translateX(10px);
+    opacity: 0;
+}
+#wrapper.menu-open .humbergermenu .humberger_line:nth-child(3) {
+    transform: translateY(-7px) rotate(-315deg);
+}
+
+
+/* -------------------------
+conetents
+------------------------- */
+#contents {
+    width: 100%;
+    text-align: center;
+    margin: 300px 50px 0 50px;
+}
+
+#contents section {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+#contents h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#contents h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#contents ul.usage li {
+    font-size: 16px;
+    margin-bottom: 15px;
+}

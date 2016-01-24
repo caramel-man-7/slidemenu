@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        $(function () {
+            $(".humbergermenu").click(function () {
+                $("#wrapper").toggleClass("menu-open");
+            });
+            $('ul.menu li').hover(function(){
+                $(this).children('ul').show();
+            }, function(){
+                $(this).children('ul').hide();
+            });
+        });
+    </script>
+    <div id="wrapper">
+        <!-- ▽ humbergermenu -->
+        <div class="humbergermenu">
+            <span class="humberger_line"></span>
+            <span class="humberger_line"></span>
+            <span class="humberger_line"></span>
+        </div>
+        <!-- △ humbergermenu -->
+        <!-- ▽ navigation -->
+        <div id="nav">
+            <ul class="menu">
+                <li><a href="">menu1</a>
+                    <ul class="menu_sub">
+                        <li>sub1</li>
+                        <li>sub2</li>
+                        <li>sub3</li>
+                    </ul>
+                </li>
+                <li><a href="">menu2</a>
+                    <ul class="menu_sub">
+                        <li>sub1</li>
+                        <li>sub2</li>
+                        <li>sub3</li>
+                    </ul>
+                </li>
+                <li><a href="">menu3</a>
+                    <ul class="menu_sub">
+                        <li>sub1</li>
+                        <li>sub2</li>
+                        <li>sub3</li>
+                    </ul>
+                </li>
+                <li><a href="">menu4</a></li>
+                <li><a href="">menu5</a></li>
+            </ul>
+        </div>
+        <!-- △ navigation -->
+        <!-- ▽ contents -->
+        <div id="contents">
+            <div class="ttl_1">
+                <h1>toggleclassを使ったハンバーガーメニュー</h1>
+            </div>
+
+            <section>
+                <h2>やりたいこと</h2>
+                <ul>
+                    <li>ハンバーガーメニューをクリックするとメインメニューがスライドイン</li>
+                    <li>ハンバーガーメニューは×に変化する</li>
+                    <li>ハンバーガーメニューの×をクリックするとメインメニューは元の位置にスライドして戻る</li>
+                    <li>第二階層の各メニューをクリックするとサブメニューが出現する</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>仕様</h2>
+                <ul>
+                    <li>メニューのon/off は toggleclass を使用する</li>
+                    <li>#nav に .menu-open を付与してメニューが開いたときのスタイルを、メニューとハンバーガーアイコンに追加する</li>
+                    <li>アニメーションはcss3</li>
+                    <li>サブメニューは</li>
+                </ul>
+            </section>
+        </div>
+        <!-- △ contents -->
+
+
+    </div>
+
+</body>
+
+</html>
